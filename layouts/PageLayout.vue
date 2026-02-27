@@ -1,42 +1,30 @@
 <script setup lang="ts">
 import Header from './Header.vue'
 import Footer from './Footer.vue'
-
-const props = withDefaults(
-  defineProps<{
-    heroBgEnabled?: boolean
-    heroBgHeight?: string
-  }>(),
-  {
-    heroBgEnabled: true,
-    // regola questa altezza finché lo sfondo copre hero + parte CTA come Udemy
-    heroBgHeight: '560px'
-  }
-)
+import AnnouncementBar from '~/components/common/AnnouncementBar.vue'
+import StickyCourseBar from '~/components/udemy/StickyCourseBar.vue'
 </script>
 
 <template>
-  <Header />
+  <AnnouncementBar />
 
-  <!-- Page wrapper -->
-  <div class="relative w-full">
-    <!-- Full-width hero background strip -->
-    <div
-      v-if="props.heroBgEnabled"
-      aria-hidden="true"
-      class="absolute inset-x-0 top-0 hidden bg-slate-950 xl:block"
-      :style="{ height: props.heroBgHeight }"
-    />
+  
+  
+    <Header />
+  
 
-    <!-- Content container (keeps grid aligned) -->
-    <div class="relative mx-auto w-full max-w-7xl px-4 sm:px-6 xl:px-8">
+  <!-- Barra nera sotto header -->
+  <StickyCourseBar />
+
+  <div class="w-full">
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 gap-8 xl:grid-cols-12">
-        <main class="xl:col-span-8 xl:col-span-8">
+        <main class="xl:col-span-8">
           <slot name="main" />
         </main>
 
-        <aside class="xl:col-span-4 xl:col-span-4">
-          <div class="xl:sticky xl:top-6">
+        <aside class="xl:col-span-4">
+          <div class="xl:sticky xl:top-24">
             <slot name="aside" />
           </div>
         </aside>

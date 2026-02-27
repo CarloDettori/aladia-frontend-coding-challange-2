@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 const isMenuOpen = ref(false)
 
@@ -46,17 +46,14 @@ const onKeyDown = (e: KeyboardEvent) => {
   if (e.key === 'Escape') closeMenu()
 }
 
-watch(isMenuOpen, (open) => {
-  // blocca scroll quando drawer aperto
-  if (process.client) document.body.style.overflow = open ? 'hidden' : ''
-})
+
 
 onMounted(() => window.addEventListener('keydown', onKeyDown))
 onBeforeUnmount(() => window.removeEventListener('keydown', onKeyDown))
 </script>
 
 <template>
-  <header class="border-b bg-white">
+  <header class="relative z-50 border-b bg-white">
     <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between gap-3">
         <!-- LEFT: hamburger (mobile) -->
