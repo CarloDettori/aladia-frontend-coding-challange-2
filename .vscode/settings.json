@@ -1,0 +1,11 @@
+{
+  "files.watcherExclude": {
+    "**/.nuxt/**": true
+  },
+  "files.exclude": {
+    "**/.nuxt": true
+  },
+  "search.exclude": {
+    "**/.nuxt": true
+  }
+}
