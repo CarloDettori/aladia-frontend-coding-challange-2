@@ -1,24 +1,35 @@
 <script setup lang="ts">
-import PageLayout from '~/layouts/PageLayout.vue';
-import Hero from '~/components/udemy/Hero.vue';
-import WhatYouLearn from '~/components/udemy/WhatYouLearn.vue';
-import Includes from '~/components/udemy/Includes.vue';
-import CurriculumPreview from '~/components/udemy/CurriculumPreview.vue';
-import Description from '~/components/udemy/Description.vue';
-import Instructors from '~/components/udemy/Instructors.vue';
-import Reviews from '~/components/udemy/Reviews.vue';
-import FAQ from '~/components/udemy/FAQ.vue';
-import CTAAside from '~/components/udemy/CTAAside.vue';
+import PageLayout from '~/layouts/PageLayout.vue'
+import Hero from '~/components/udemy/Hero.vue'
+import CTAVideo from '~/components/udemy/CTAVideo.vue'
+import CTAPanel from '~/components/udemy/CTAPanel.vue'
+import CTAAside from '~/components/udemy/CTAAside.vue'
+
+import WhatYouLearn from '~/components/udemy/WhatYouLearn.vue'
+import Includes from '~/components/udemy/Includes.vue'
+import CurriculumPreview from '~/components/udemy/CurriculumPreview.vue'
+import Description from '~/components/udemy/Description.vue'
+import Instructors from '~/components/udemy/Instructors.vue'
+import Reviews from '~/components/udemy/Reviews.vue'
+import FAQ from '~/components/udemy/FAQ.vue'
 </script>
 
-
 <template>
-  <PageLayout>
-
+  <PageLayout :hero-bg-enabled="true" hero-bg-height="560px">
     <template #main>
+      <!-- DESKTOP (>= xl): hero dark -->
+      <div class="hidden xl:block">
+        <Hero variant="dark" />
+      </div>
 
-      <Hero />
+      <!-- MOBILE/TABLET (< xl): video -> hero light -> panel -->
+      <div class="xl:hidden space-y-6 py-6">
+        <CTAVideo />
+        <Hero variant="light" />
+        <CTAPanel />
+      </div>
 
+      <!-- Rest of page -->
       <div class="bg-white">
         <WhatYouLearn class="mt-8" />
         <Includes class="mt-8" />
@@ -28,16 +39,13 @@ import CTAAside from '~/components/udemy/CTAAside.vue';
         <Reviews class="mt-10" />
         <FAQ class="mt-10" />
       </div>
-
     </template>
 
     <template #aside>
-
-      <div class="pt-8 lg:-mt-40"">
-      <CTAAside />
+      <!-- DESKTOP (>= xl): sticky CTA -->
+      <div class="hidden xl:block pt-8 xl:-mt-40">
+        <CTAAside />
       </div>
-
     </template>
-
   </PageLayout>
 </template>
