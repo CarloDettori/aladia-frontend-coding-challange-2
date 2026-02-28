@@ -15,7 +15,10 @@ const items = [
     <div>
       <CommonSectionTitle title="A chi è rivolto questo corso" />
 
-      <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-700" aria-label="Target audience">
+      <ul
+        class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-700"
+        aria-label="Target audience"
+      >
         <li v-for="i in items" :key="i">
           {{ i }}
         </li>

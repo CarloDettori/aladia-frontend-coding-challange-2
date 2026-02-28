@@ -21,8 +21,7 @@ const instructors = ref<Instructor[]>([
     reviews: '414.294',
     students: '1.745.088',
     courses: '7',
-    bio:
-      "Angela is a developer with a passion for teaching. She has taught millions of students how to code and enjoys breaking down complex topics into practical, project-based lessons. In this course you’ll build real apps, games, and automation scripts while learning professional Python workflows."
+    bio: 'Angela is a developer with a passion for teaching. She has taught millions of students how to code and enjoys breaking down complex topics into practical, project-based lessons. In this course you’ll build real apps, games, and automation scripts while learning professional Python workflows.'
   }
 ])
 
@@ -44,7 +43,9 @@ const toggleBio = (name: string) => {
           class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
         >
           <!-- Header -->
-          <header class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+          <header
+            class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"
+          >
             <div class="min-w-0">
               <h3 class="text-xl font-extrabold text-slate-900">
                 <a href="#" class="hover:underline">{{ inst.name }}</a>
@@ -52,13 +53,17 @@ const toggleBio = (name: string) => {
               <p class="mt-1 text-sm text-slate-600">{{ inst.role }}</p>
 
               <!-- Stats row -->
-              <dl class="mt-4 grid grid-cols-2 gap-3 text-sm sm:flex sm:flex-wrap sm:gap-x-6 sm:gap-y-2">
+              <dl
+                class="mt-4 grid grid-cols-2 gap-3 text-sm sm:flex sm:flex-wrap sm:gap-x-6 sm:gap-y-2"
+              >
                 <div class="flex items-center gap-2">
                   <dt class="sr-only">Rating</dt>
                   <dd class="text-slate-700">
                     <span aria-hidden="true">⭐</span>
                     <span class="ml-1 font-semibold">{{ inst.rating }}</span>
-                    <span class="ml-1 text-slate-500">valutazione istruttore</span>
+                    <span class="ml-1 text-slate-500"
+                      >valutazione istruttore</span
+                    >
                   </dd>
                 </div>
 
@@ -115,12 +120,18 @@ const toggleBio = (name: string) => {
               :aria-expanded="!!expanded[inst.name]"
               :aria-controls="`bio-${inst.name.replaceAll(' ', '-')}`"
             >
-              <span>{{ expanded[inst.name] ? 'Mostra meno' : 'Mostra di più' }}</span>
-              <span aria-hidden="true">{{ expanded[inst.name] ? '▴' : '▾' }}</span>
+              <span>{{
+                expanded[inst.name] ? 'Mostra meno' : 'Mostra di più'
+              }}</span>
+              <span aria-hidden="true">{{
+                expanded[inst.name] ? '▴' : '▾'
+              }}</span>
             </button>
 
             <!-- hidden region for aria-controls target -->
-            <span class="sr-only" :id="`bio-${inst.name.replaceAll(' ', '-')}`">Bio</span>
+            <span class="sr-only" :id="`bio-${inst.name.replaceAll(' ', '-')}`"
+              >Bio</span
+            >
           </div>
         </article>
       </div>

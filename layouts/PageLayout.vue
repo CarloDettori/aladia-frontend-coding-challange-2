@@ -8,10 +8,7 @@ import StickyCourseBar from '~/components/udemy/StickyCourseBar.vue'
 <template>
   <AnnouncementBar />
 
-  
-  
-    <Header />
-  
+  <Header />
 
   <!-- Barra nera sotto header -->
   <StickyCourseBar />

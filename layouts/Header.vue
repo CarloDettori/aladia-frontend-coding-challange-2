@@ -46,8 +46,6 @@ const onKeyDown = (e: KeyboardEvent) => {
   if (e.key === 'Escape') closeMenu()
 }
 
-
-
 onMounted(() => window.addEventListener('keydown', onKeyDown))
 onBeforeUnmount(() => window.removeEventListener('keydown', onKeyDown))
 </script>
@@ -71,7 +69,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeyDown))
         <!-- logo -->
         <a
           href="#"
-          class=" xl:hidden text-xl font-extrabold tracking-tight text-slate-900"
+          class="xl:hidden text-xl font-extrabold tracking-tight text-slate-900"
           aria-label="Udemy home"
         >
           udemy
@@ -79,18 +77,28 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeyDown))
 
         <!-- RIGHT: icons (mobile) -->
         <div class="flex items-center gap-2 md:hidden">
-          <button class="rounded-md p-2 hover:bg-slate-100" type="button" aria-label="Search">
+          <button
+            class="rounded-md p-2 hover:bg-slate-100"
+            type="button"
+            aria-label="Search"
+          >
             🔍
           </button>
-          <button class="rounded-md p-2 hover:bg-slate-100" type="button" aria-label="Cart">
+          <button
+            class="rounded-md p-2 hover:bg-slate-100"
+            type="button"
+            aria-label="Cart"
+          >
             🛒
           </button>
         </div>
 
         <!-- DESKTOP HEADER (>= md) -->
         <div class="hidden w-full md:flex md:items-center md:gap-4">
-          
-          <a class="shrink-0 text-sm font-semibold text-slate-700 hover:text-slate-900" href="#">
+          <a
+            class="shrink-0 text-sm font-semibold text-slate-700 hover:text-slate-900"
+            href="#"
+          >
             Esplora
           </a>
 
@@ -98,7 +106,11 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeyDown))
           <div class="flex flex-1 items-center">
             <label class="sr-only" for="search">Cerca corsi</label>
             <div class="relative w-full max-w-2xl">
-              <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" aria-hidden="true">🔎</span>
+              <span
+                class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-500"
+                aria-hidden="true"
+                >🔎</span
+              >
               <input
                 id="search"
                 type="search"
@@ -109,23 +121,42 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeyDown))
           </div>
 
           <!-- Right links -->
-          <nav class="hidden lg:flex items-center gap-4" aria-label="Header navigation">
-            <a href="#" class="text-sm text-slate-700 hover:text-slate-900">Udemy Business</a>
-            <a href="#" class="text-sm text-slate-700 hover:text-slate-900">Insegna su Udemy</a>
+          <nav
+            class="hidden lg:flex items-center gap-4"
+            aria-label="Header navigation"
+          >
+            <a href="#" class="text-sm text-slate-700 hover:text-slate-900"
+              >Udemy Business</a
+            >
+            <a href="#" class="text-sm text-slate-700 hover:text-slate-900"
+              >Insegna su Udemy</a
+            >
           </nav>
 
-          <button class="hidden sm:inline-flex rounded-md p-2 text-slate-700 hover:bg-slate-100" type="button" aria-label="Cart">
+          <button
+            class="hidden sm:inline-flex rounded-md p-2 text-slate-700 hover:bg-slate-100"
+            type="button"
+            aria-label="Cart"
+          >
             🛒
           </button>
 
           <div class="flex shrink-0 items-center gap-2">
-            <button class="rounded-md border border-violet-700 px-3 py-2 text-sm font-bold text-violet-700 hover:bg-violet-50">
+            <button
+              class="rounded-md border border-violet-700 px-3 py-2 text-sm font-bold text-violet-700 hover:bg-violet-50"
+            >
               Accedi
             </button>
-            <button class="rounded-md bg-violet-700 px-3 py-2 text-sm font-bold text-white hover:bg-violet-800">
+            <button
+              class="rounded-md bg-violet-700 px-3 py-2 text-sm font-bold text-white hover:bg-violet-800"
+            >
               Registrati
             </button>
-            <button class="hidden sm:inline-flex rounded-md border border-slate-300 px-3 py-2 hover:bg-slate-50" type="button" aria-label="Language">
+            <button
+              class="hidden sm:inline-flex rounded-md border border-slate-300 px-3 py-2 hover:bg-slate-50"
+              type="button"
+              aria-label="Language"
+            >
               🌐
             </button>
           </div>
@@ -167,17 +198,27 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeyDown))
           <!-- auth -->
           <ul class="space-y-3 pb-4">
             <li v-for="l in mainLinks" :key="l.label">
-              <a :href="l.href" class="block text-slate-800 hover:underline">{{ l.label }}</a>
+              <a :href="l.href" class="block text-slate-800 hover:underline">{{
+                l.label
+              }}</a>
             </li>
           </ul>
 
           <hr class="my-4 border-slate-200" />
 
           <!-- explore -->
-          <div class="pb-2 font-semibold text-slate-800">Esplora per obiettivo</div>
+          <div class="pb-2 font-semibold text-slate-800">
+            Esplora per obiettivo
+          </div>
           <ul class="space-y-3">
-            <li v-for="l in exploreLinks" :key="l.label" class="flex items-center justify-between gap-3">
-              <a :href="l.href" class="block text-slate-700 hover:underline">{{ l.label }}</a>
+            <li
+              v-for="l in exploreLinks"
+              :key="l.label"
+              class="flex items-center justify-between gap-3"
+            >
+              <a :href="l.href" class="block text-slate-700 hover:underline">{{
+                l.label
+              }}</a>
               <span aria-hidden="true" class="text-slate-400">›</span>
             </li>
           </ul>
@@ -187,8 +228,14 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeyDown))
           <!-- popular -->
           <div class="pb-2 font-semibold text-slate-800">Più popolari</div>
           <ul class="space-y-3">
-            <li v-for="l in popularLinks" :key="l.label" class="flex items-center justify-between gap-3">
-              <a :href="l.href" class="block text-slate-700 hover:underline">{{ l.label }}</a>
+            <li
+              v-for="l in popularLinks"
+              :key="l.label"
+              class="flex items-center justify-between gap-3"
+            >
+              <a :href="l.href" class="block text-slate-700 hover:underline">{{
+                l.label
+              }}</a>
               <span aria-hidden="true" class="text-slate-400">›</span>
             </li>
           </ul>
@@ -196,10 +243,18 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeyDown))
           <hr class="my-4 border-slate-200" />
 
           <!-- services -->
-          <div class="pb-2 font-semibold text-slate-800">Altri servizi di Udemy</div>
+          <div class="pb-2 font-semibold text-slate-800">
+            Altri servizi di Udemy
+          </div>
           <ul class="space-y-3">
-            <li v-for="l in serviceLinks" :key="l.label" class="flex items-center justify-between gap-3">
-              <a :href="l.href" class="block text-slate-700 hover:underline">{{ l.label }}</a>
+            <li
+              v-for="l in serviceLinks"
+              :key="l.label"
+              class="flex items-center justify-between gap-3"
+            >
+              <a :href="l.href" class="block text-slate-700 hover:underline">{{
+                l.label
+              }}</a>
               <span aria-hidden="true" class="text-slate-400">›</span>
             </li>
           </ul>
@@ -209,7 +264,9 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeyDown))
           <!-- support -->
           <ul class="space-y-3">
             <li v-for="l in supportLinks" :key="l.label">
-              <a :href="l.href" class="block text-slate-700 hover:underline">{{ l.label }}</a>
+              <a :href="l.href" class="block text-slate-700 hover:underline">{{
+                l.label
+              }}</a>
             </li>
           </ul>
 

@@ -56,7 +56,9 @@ const courses: CourseRow[] = [
     <div>
       <CommonSectionTitle title="Gli studenti hanno acquistato anche" />
 
-      <div class="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-white">
+      <div
+        class="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-white"
+      >
         <article
           v-for="c in courses"
           :key="c.title"
@@ -65,7 +67,10 @@ const courses: CourseRow[] = [
           <!-- Left -->
           <div class="flex min-w-0 gap-4">
             <!-- thumbnail placeholder -->
-            <div class="h-16 w-28 shrink-0 rounded bg-slate-200" aria-hidden="true" />
+            <div
+              class="h-16 w-28 shrink-0 rounded bg-slate-200"
+              aria-hidden="true"
+            />
 
             <div class="min-w-0">
               <h3 class="truncate font-bold text-slate-900">
@@ -73,8 +78,12 @@ const courses: CourseRow[] = [
               </h3>
               <p class="mt-1 text-xs text-slate-600">{{ c.author }}</p>
 
-              <div class="mt-2 flex flex-wrap items-center gap-2 text-xs text-slate-600">
-                <span class="font-semibold text-slate-900">{{ c.rating.toFixed(1) }}</span>
+              <div
+                class="mt-2 flex flex-wrap items-center gap-2 text-xs text-slate-600"
+              >
+                <span class="font-semibold text-slate-900">{{
+                  c.rating.toFixed(1)
+                }}</span>
                 <CommonRatingStars :value="c.rating" size="sm" />
                 <span class="text-slate-400">•</span>
                 <span>({{ c.reviews }})</span>
@@ -87,15 +96,22 @@ const courses: CourseRow[] = [
                 <span class="hidden sm:inline">{{ c.level }}</span>
               </div>
 
-              <div v-if="c.badge" class="mt-2 inline-flex rounded bg-amber-200 px-2 py-0.5 text-xs font-semibold text-slate-900">
+              <div
+                v-if="c.badge"
+                class="mt-2 inline-flex rounded bg-amber-200 px-2 py-0.5 text-xs font-semibold text-slate-900"
+              >
                 {{ c.badge }}
               </div>
             </div>
           </div>
 
           <!-- Right -->
-          <div class="flex shrink-0 items-center justify-between gap-4 sm:flex-col sm:items-end">
-            <span class="text-sm font-extrabold text-slate-900">{{ c.price }}</span>
+          <div
+            class="flex shrink-0 items-center justify-between gap-4 sm:flex-col sm:items-end"
+          >
+            <span class="text-sm font-extrabold text-slate-900">{{
+              c.price
+            }}</span>
             <button
               type="button"
               class="rounded-md border border-slate-900 px-3 py-2 text-sm font-bold text-slate-900 hover:bg-slate-50"

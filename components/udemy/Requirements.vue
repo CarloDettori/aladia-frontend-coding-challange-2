@@ -13,7 +13,7 @@ const props = withDefaults(
   {
     title: 'Requisiti',
     intro:
-      "Welcome to the 100 Days of Code - The Complete Python Pro Bootcamp, the only course you need to learn to code with Python.",
+      'Welcome to the 100 Days of Code - The Complete Python Pro Bootcamp, the only course you need to learn to code with Python.',
     items: () => [
       "No programming experience needed - I'll teach you everything you need to know",
       'A 64-bit Mac or PC computer with 4GB of memory and access to the internet',
@@ -22,10 +22,10 @@ const props = withDefaults(
       // “extra” (visibili solo dopo expand)
       'The course is taught by the lead instructor at the App Brewery, London’s best in-person programming Bootcamp.',
       'The course has been updated and you’ll be learning the latest tools and technologies used at large companies.',
-      "This course doesn’t cut any corners; there are beautiful animated explanation videos and real-world projects.",
+      'This course doesn’t cut any corners; there are beautiful animated explanation videos and real-world projects.',
       'The curriculum was developed over a period of 2 years, with comprehensive student testing and feedback.',
-      "We’ve taught over 600,000 students how to code and many have gone on to change their lives by becoming developers.",
-      "You’ll save yourself over $12,000 by enrolling, and still get access to the same teaching materials."
+      'We’ve taught over 600,000 students how to code and many have gone on to change their lives by becoming developers.',
+      'You’ll save yourself over $12,000 by enrolling, and still get access to the same teaching materials.'
     ],
     previewCount: 4
   }

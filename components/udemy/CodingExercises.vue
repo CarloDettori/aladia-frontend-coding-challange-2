@@ -6,11 +6,14 @@ import CommonSectionTitle from '~/components/common/SectionTitle.vue'
 <template>
   <CommonSection>
     <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-      <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <div
+        class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
+      >
         <div class="min-w-0">
           <CommonSectionTitle title="Esercizi di codifica" />
           <p class="mt-2 text-sm text-slate-700">
-            Metti in pratica ciò che impari con esercizi guidati e feedback immediato. (Sezione statica per la challenge)
+            Metti in pratica ciò che impari con esercizi guidati e feedback
+            immediato. (Sezione statica per la challenge)
           </p>
 
           <div class="mt-4 flex flex-wrap gap-3">

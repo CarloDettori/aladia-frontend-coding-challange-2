@@ -58,7 +58,10 @@ const oldTotalLabel = '69,97 €'
   <section aria-labelledby="ai-programmer-title" class="mt-10">
     <CommonSection>
       <div class="space-y-6">
-        <h2 id="ai-programmer-title" class="text-3xl font-extrabold tracking-tight text-slate-900">
+        <h2
+          id="ai-programmer-title"
+          class="text-3xl font-extrabold tracking-tight text-slate-900"
+        >
           The AI Programmer
         </h2>
 
@@ -81,7 +84,10 @@ const oldTotalLabel = '69,97 €'
                       class="h-full w-full object-cover"
                       loading="lazy"
                     />
-                    <div v-else class="flex h-full w-full items-center justify-center text-slate-400">
+                    <div
+                      v-else
+                      class="flex h-full w-full items-center justify-center text-slate-400"
+                    >
                       (image)
                     </div>
                   </div>
@@ -90,7 +96,9 @@ const oldTotalLabel = '69,97 €'
                 <!-- Text -->
                 <div class="flex-1">
                   <div class="flex flex-col gap-1">
-                    <h3 class="text-base font-extrabold text-slate-900 sm:text-lg">
+                    <h3
+                      class="text-base font-extrabold text-slate-900 sm:text-lg"
+                    >
                       {{ c.title }}
                     </h3>
                     <p class="text-sm text-slate-700">
@@ -103,7 +111,9 @@ const oldTotalLabel = '69,97 €'
 
                   <!-- Meta row -->
                   <div class="mt-3 flex flex-wrap items-center gap-2">
-                    <CommonBadge v-if="c.isBestSeller" variant="success">Best seller</CommonBadge>
+                    <CommonBadge v-if="c.isBestSeller" variant="success"
+                      >Best seller</CommonBadge
+                    >
 
                     <span
                       v-if="typeof c.rating === 'number'"
@@ -125,11 +135,7 @@ const oldTotalLabel = '69,97 €'
               </div>
 
               <!-- (Optional) clickable overlay -->
-              <a
-                href="#"
-                class="absolute inset-0"
-                aria-label="Open course"
-              />
+              <a href="#" class="absolute inset-0" aria-label="Open course" />
             </article>
 
             <!-- Plus separator (between cards) -->
@@ -138,8 +144,12 @@ const oldTotalLabel = '69,97 €'
               class="relative flex items-center justify-center py-2"
               aria-hidden="true"
             >
-              <div class="absolute left-0 right-0 top-1/2 h-px -translate-y-1/2 bg-slate-200" />
-              <div class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white">
+              <div
+                class="absolute left-0 right-0 top-1/2 h-px -translate-y-1/2 bg-slate-200"
+              />
+              <div
+                class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white"
+              >
                 <span class="text-xl leading-none text-slate-600">+</span>
               </div>
             </div>
@@ -149,7 +159,9 @@ const oldTotalLabel = '69,97 €'
           <div class="flex flex-wrap items-center justify-end gap-3 pt-2">
             <div class="text-sm text-slate-700">
               <span class="font-semibold">{{ totalLabel }}</span>
-              <span class="ml-2 text-slate-400 line-through">{{ oldTotalLabel }}</span>
+              <span class="ml-2 text-slate-400 line-through">{{
+                oldTotalLabel
+              }}</span>
             </div>
 
             <button

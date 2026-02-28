@@ -40,20 +40,19 @@ AiProgrammer
       <!-- Rest of page -->
       <div class="bg-white">
         <WhatYouLearn class="mt-8" />
-  <RelatedTopics class="mt-8" />
-  <Includes class="mt-8" />
-  <CodingExercises class="mt-10" />
-  <CurriculumPreview class="mt-10" />
-  <Requirements class="mt-10" />
-  <Description class="mt-10" />
-  <WhoThisCourseIsFor class="mt-10" />
-  <StudentsAlsoBought class="mt-10" />
-  <AiProgrammer class="mt-10" />
-  <MoreCoursesByInstructor class="mt-10" />
-  <Instructors class="mt-10" />
-  <Reviews class="mt-10" />
-  <FAQ class="mt-10" />
-
+        <RelatedTopics class="mt-8" />
+        <Includes class="mt-8" />
+        <CodingExercises class="mt-10" />
+        <CurriculumPreview class="mt-10" />
+        <Requirements class="mt-10" />
+        <Description class="mt-10" />
+        <WhoThisCourseIsFor class="mt-10" />
+        <StudentsAlsoBought class="mt-10" />
+        <AiProgrammer class="mt-10" />
+        <MoreCoursesByInstructor class="mt-10" />
+        <Instructors class="mt-10" />
+        <Reviews class="mt-10" />
+        <FAQ class="mt-10" />
       </div>
     </template>
 

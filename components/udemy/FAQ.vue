@@ -39,7 +39,9 @@ const toggle = (index: number) => {
     <div>
       <SectionTitle title="Domande frequenti" />
 
-      <div class="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-white">
+      <div
+        class="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-white"
+      >
         <div
           v-for="(item, index) in faqs"
           :key="item.q"

@@ -22,32 +22,28 @@ const reviews: Review[] = [
     initials: 'MR',
     rating: 5,
     date: '1 settimana fa',
-    text:
-      'Corso super completo e ben strutturato. Mi ha aiutato a costruire una routine giornaliera e a consolidare Python con progetti reali.'
+    text: 'Corso super completo e ben strutturato. Mi ha aiutato a costruire una routine giornaliera e a consolidare Python con progetti reali.'
   },
   {
     name: 'Giulia S.',
     initials: 'GS',
     rating: 5,
     date: '2 settimane fa',
-    text:
-      'Spiegazioni chiare e progressione ottima. I mini-progetti sono il punto forte: ti fanno capire davvero cosa stai facendo.'
+    text: 'Spiegazioni chiare e progressione ottima. I mini-progetti sono il punto forte: ti fanno capire davvero cosa stai facendo.'
   },
   {
     name: 'Luca B.',
     initials: 'LB',
     rating: 4,
     date: '3 settimane fa',
-    text:
-      'Tantissimo contenuto, a volte intenso, ma la qualità è alta. Consigliato a chi vuole fare un salto di livello con Python.'
+    text: 'Tantissimo contenuto, a volte intenso, ma la qualità è alta. Consigliato a chi vuole fare un salto di livello con Python.'
   },
   {
     name: 'Sara P.',
     initials: 'SP',
     rating: 5,
     date: '1 mese fa',
-    text:
-      'Ho apprezzato il focus pratico: automazione, web, data. È uno di quei corsi che puoi mettere in portfolio.'
+    text: 'Ho apprezzato il focus pratico: automazione, web, data. È uno di quei corsi che puoi mettere in portfolio.'
   }
 ]
 </script>
@@ -58,7 +54,9 @@ const reviews: Review[] = [
       <SectionTitle title="Valutazioni e recensioni" />
 
       <!-- Summary -->
-      <div class="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+      <div
+        class="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8"
+      >
         <div class="flex items-center gap-4">
           <div class="text-5xl font-extrabold text-slate-900">
             {{ summary.rating }}
@@ -72,7 +70,8 @@ const reviews: Review[] = [
         </div>
 
         <p class="text-sm text-slate-600">
-          Le recensioni più recenti (esempio statico) per mostrare la struttura della sezione.
+          Le recensioni più recenti (esempio statico) per mostrare la struttura
+          della sezione.
         </p>
       </div>
 
@@ -96,7 +95,9 @@ const reviews: Review[] = [
                 <h3 class="truncate font-semibold text-slate-900">
                   {{ r.name }}
                 </h3>
-                <div class="mt-1 flex flex-wrap items-center gap-2 text-sm text-slate-600">
+                <div
+                  class="mt-1 flex flex-wrap items-center gap-2 text-sm text-slate-600"
+                >
                   <RatingStars :value="r.rating" />
                   <span class="text-slate-400">•</span>
                   <span>{{ r.date }}</span>

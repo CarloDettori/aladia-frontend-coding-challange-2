@@ -128,10 +128,14 @@ const bottomColumns = [
     <!-- Top dark strip -->
     <section class="bg-slate-900 text-white">
       <div class="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <div class="flex flex-col gap-4 min-[800px]:flex-row min-[800px]:items-center min-[800px]:justify-between">
+        <div
+          class="flex flex-col gap-4 min-[800px]:flex-row min-[800px]:items-center min-[800px]:justify-between"
+        >
           <p class="max-w-3xl text-sm font-semibold">
-            Le aziende più importanti scelgono <span class="text-violet-300">Udemy Business</span>
-            per fornire ai propri dipendenti le competenze professionali più richieste.
+            Le aziende più importanti scelgono
+            <span class="text-violet-300">Udemy Business</span>
+            per fornire ai propri dipendenti le competenze professionali più
+            richieste.
           </p>
 
           <!-- Logos placeholder -->
@@ -154,7 +158,9 @@ const bottomColumns = [
         </h2>
 
         <!-- Desktop grid (>= 800px) -->
-        <div class="mt-8 hidden min-[800px]:grid min-[800px]:grid-cols-4 min-[800px]:gap-10">
+        <div
+          class="mt-8 hidden min-[800px]:grid min-[800px]:grid-cols-4 min-[800px]:gap-10"
+        >
           <div v-for="sec in sections" :key="sec.title">
             <h3 class="text-sm font-semibold">{{ sec.title }}</h3>
             <ul class="mt-4 space-y-2 text-sm text-slate-200">
@@ -167,13 +173,19 @@ const bottomColumns = [
 
         <!-- Mobile accordion (< 800px) -->
         <div class="mt-6 min-[800px]:hidden">
-          <div class="divide-y divide-white/15 rounded-lg border border-white/10">
+          <div
+            class="divide-y divide-white/15 rounded-lg border border-white/10"
+          >
             <details v-for="sec in sections" :key="sec.title" class="group">
               <summary
                 class="flex cursor-pointer list-none items-center justify-between gap-4 px-4 py-4 text-sm font-semibold"
               >
                 <span>{{ sec.title }}</span>
-                <span class="text-slate-300 transition group-open:rotate-180" aria-hidden="true">▾</span>
+                <span
+                  class="text-slate-300 transition group-open:rotate-180"
+                  aria-hidden="true"
+                  >▾</span
+                >
               </summary>
 
               <div class="px-4 pb-4">
@@ -206,7 +218,9 @@ const bottomColumns = [
 
       <!-- Very bottom bar -->
       <div class="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <div class="flex flex-col gap-4 min-[800px]:flex-row min-[800px]:items-center min-[800px]:justify-between">
+        <div
+          class="flex flex-col gap-4 min-[800px]:flex-row min-[800px]:items-center min-[800px]:justify-between"
+        >
           <div class="flex items-center gap-3">
             <span class="text-lg font-extrabold">udemy</span>
             <span class="text-sm text-slate-300">© 2026 Udemy, Inc.</span>

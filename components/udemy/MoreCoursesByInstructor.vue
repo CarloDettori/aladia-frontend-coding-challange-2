@@ -50,7 +50,10 @@ const courses: CourseCard[] = [
           class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow transition"
         >
           <!-- thumbnail -->
-          <div class="aspect-[16/9] w-full rounded-lg bg-slate-200" aria-hidden="true"></div>
+          <div
+            class="aspect-[16/9] w-full rounded-lg bg-slate-200"
+            aria-hidden="true"
+          ></div>
 
           <h3 class="mt-3 line-clamp-2 text-sm font-extrabold text-slate-900">
             <a href="#" class="hover:underline">{{ c.title }}</a>
@@ -58,18 +61,27 @@ const courses: CourseCard[] = [
 
           <p class="mt-1 text-xs text-slate-600">{{ c.author }}</p>
 
-          <div class="mt-2 flex flex-wrap items-center gap-2 text-xs text-slate-600">
-            <span class="font-semibold text-slate-900">{{ c.rating.toFixed(1) }}</span>
+          <div
+            class="mt-2 flex flex-wrap items-center gap-2 text-xs text-slate-600"
+          >
+            <span class="font-semibold text-slate-900">{{
+              c.rating.toFixed(1)
+            }}</span>
             <CommonRatingStars :value="c.rating" size="sm" />
             <span class="text-slate-400">•</span>
             <span>({{ c.reviews }})</span>
           </div>
 
-          <div v-if="c.badge" class="mt-2 inline-flex rounded bg-amber-200 px-2 py-0.5 text-xs font-semibold text-slate-900">
+          <div
+            v-if="c.badge"
+            class="mt-2 inline-flex rounded bg-amber-200 px-2 py-0.5 text-xs font-semibold text-slate-900"
+          >
             {{ c.badge }}
           </div>
 
-          <div class="mt-3 text-sm font-extrabold text-slate-900">{{ c.price }}</div>
+          <div class="mt-3 text-sm font-extrabold text-slate-900">
+            {{ c.price }}
+          </div>
         </article>
       </div>
 

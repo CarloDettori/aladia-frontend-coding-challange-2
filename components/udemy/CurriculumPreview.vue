@@ -78,7 +78,9 @@ const summary = computed(() => {
       <SectionTitle title="Contenuti del corso" />
       <p class="text-sm text-slate-600">{{ summary }}</p>
 
-      <div class="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-white">
+      <div
+        class="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-white"
+      >
         <div
           v-for="(section, index) in sections"
           :key="section.title"
@@ -123,10 +125,14 @@ const summary = computed(() => {
                 class="flex items-start justify-between gap-4 text-sm text-slate-700"
               >
                 <div class="flex min-w-0 items-start gap-3">
-                  <span aria-hidden="true" class="mt-0.5 text-slate-500">▶</span>
+                  <span aria-hidden="true" class="mt-0.5 text-slate-500"
+                    >▶</span
+                  >
                   <span class="truncate">{{ lesson.title }}</span>
                 </div>
-                <span class="shrink-0 text-xs text-slate-500">{{ lesson.duration }}</span>
+                <span class="shrink-0 text-xs text-slate-500">{{
+                  lesson.duration
+                }}</span>
               </li>
             </ul>
 

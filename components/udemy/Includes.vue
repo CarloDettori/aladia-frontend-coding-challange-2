@@ -23,14 +23,22 @@ const right = [
 
       <div class="grid gap-6 sm:grid-cols-2">
         <ul class="space-y-3" aria-label="Course includes left column">
-          <li v-for="item in left" :key="item" class="flex items-start gap-3 text-slate-700">
+          <li
+            v-for="item in left"
+            :key="item"
+            class="flex items-start gap-3 text-slate-700"
+          >
             <span aria-hidden="true">▸</span>
             <span class="text-sm">{{ item }}</span>
           </li>
         </ul>
 
         <ul class="space-y-3" aria-label="Course includes right column">
-          <li v-for="item in right" :key="item" class="flex items-start gap-3 text-slate-700">
+          <li
+            v-for="item in right"
+            :key="item"
+            class="flex items-start gap-3 text-slate-700"
+          >
             <span aria-hidden="true">▸</span>
             <span class="text-sm">{{ item }}</span>
           </li>

@@ -11,7 +11,11 @@ const active = ref<'personal' | 'team'>('personal')
       <button
         type="button"
         class="px-4 py-3 text-sm font-semibold"
-        :class="active === 'personal' ? 'border-b-2 border-slate-900' : 'text-slate-500'"
+        :class="
+          active === 'personal'
+            ? 'border-b-2 border-slate-900'
+            : 'text-slate-500'
+        "
         @click="active = 'personal'"
         aria-controls="panel-personal"
         :aria-selected="active === 'personal'"
@@ -23,7 +27,9 @@ const active = ref<'personal' | 'team'>('personal')
       <button
         type="button"
         class="px-4 py-3 text-sm font-semibold"
-        :class="active === 'team' ? 'border-b-2 border-slate-900' : 'text-slate-500'"
+        :class="
+          active === 'team' ? 'border-b-2 border-slate-900' : 'text-slate-500'
+        "
         @click="active = 'team'"
         aria-controls="panel-team"
         :aria-selected="active === 'team'"
@@ -36,13 +42,22 @@ const active = ref<'personal' | 'team'>('personal')
     <!-- Panel -->
     <div class="p-5">
       <div v-show="active === 'personal'" id="panel-personal" role="tabpanel">
-        <p class="text-xs text-slate-500">Questo corso premium è incluso nei piani</p>
-        <h3 class="mt-2 text-xl font-extrabold text-slate-900">Abbonati ai migliori corsi di Udemy</h3>
+        <p class="text-xs text-slate-500">
+          Questo corso premium è incluso nei piani
+        </p>
+        <h3 class="mt-2 text-xl font-extrabold text-slate-900">
+          Abbonati ai migliori corsi di Udemy
+        </h3>
         <p class="mt-2 text-sm text-slate-600">
-          Accedi a questo corso e a oltre 26.850 dei nostri corsi più votati con Piano individuale.
+          Accedi a questo corso e a oltre 26.850 dei nostri corsi più votati con
+          Piano individuale.
         </p>
 
-        <a href="#" class="mt-2 inline-block text-sm font-semibold text-violet-700 hover:underline">Scopri di più</a>
+        <a
+          href="#"
+          class="mt-2 inline-block text-sm font-semibold text-violet-700 hover:underline"
+          >Scopri di più</a
+        >
 
         <button
           type="button"
@@ -57,7 +72,9 @@ const active = ref<'personal' | 'team'>('personal')
             <span class="text-sm text-slate-500 line-through">19,99 €</span>
             <span class="text-sm text-slate-600">15% di sconto</span>
           </div>
-          <p class="mt-1 text-sm text-red-600">⏱ Solo 11 ore a questo prezzo!</p>
+          <p class="mt-1 text-sm text-red-600">
+            ⏱ Solo 11 ore a questo prezzo!
+          </p>
 
           <button
             type="button"

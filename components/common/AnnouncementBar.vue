@@ -3,8 +3,7 @@ import { ref } from 'vue'
 
 const isClosed = ref(false)
 
-const message =
-  'Termina tra 8 h 57 min 4 sec. Gli sconti terminano oggi'
+const message = 'Termina tra 8 h 57 min 4 sec. Gli sconti terminano oggi'
 const secondary =
   'Preparati al futuro con le competenze giuste, a partire da 12,99 €.'
 </script>
