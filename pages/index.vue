@@ -8,7 +8,6 @@ import CTAAside from '~/components/udemy/CTAAside.vue'
 import WhatYouLearn from '~/components/udemy/WhatYouLearn.vue'
 import Includes from '~/components/udemy/Includes.vue'
 import CurriculumPreview from '~/components/udemy/CurriculumPreview.vue'
-import Description from '~/components/udemy/Description.vue'
 import Instructors from '~/components/udemy/Instructors.vue'
 import Reviews from '~/components/udemy/Reviews.vue'
 import FAQ from '~/components/udemy/FAQ.vue'
@@ -19,7 +18,6 @@ import StudentsAlsoBought from '~/components/udemy/StudentsAlsoBought.vue'
 import WhoThisCourseIsFor from '~/components/udemy/WhoThisCourseIsFor.vue'
 import MoreCoursesByInstructor from '~/components/udemy/MoreCoursesByInstructor.vue'
 import AiProgrammer from '~/components/udemy/AiProgrammer.vue'
-AiProgrammer
 </script>
 
 <template>
@@ -45,7 +43,6 @@ AiProgrammer
         <CodingExercises class="mt-10" />
         <CurriculumPreview class="mt-10" />
         <Requirements class="mt-10" />
-        <Description class="mt-10" />
         <WhoThisCourseIsFor class="mt-10" />
         <StudentsAlsoBought class="mt-10" />
         <AiProgrammer class="mt-10" />

@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import CommonSection from '~/components/common/Section.vue'
-import CommonSectionTitle from '~/components/common/SectionTitle.vue'
+import Section from '~/components/common/Section.vue'
+import SectionTitle from '~/components/common/SectionTitle.vue'
 </script>
 
 <template>
-  <CommonSection>
+  <Section>
     <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
       <div
         class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
       >
         <div class="min-w-0">
-          <CommonSectionTitle title="Esercizi di codifica" />
+          <SectionTitle title="Esercizi di codifica" />
           <p class="mt-2 text-sm text-slate-700">
             Metti in pratica ciò che impari con esercizi guidati e feedback
             immediato. (Sezione statica per la challenge)
@@ -44,5 +44,5 @@ import CommonSectionTitle from '~/components/common/SectionTitle.vue'
         </div>
       </div>
     </div>
-  </CommonSection>
+  </Section>
 </template>

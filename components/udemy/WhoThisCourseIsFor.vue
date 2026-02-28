@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import CommonSection from '~/components/common/Section.vue'
-import CommonSectionTitle from '~/components/common/SectionTitle.vue'
+import Section from '~/components/common/Section.vue'
+import SectionTitle from '~/components/common/SectionTitle.vue'
 
 const items = [
   'Principianti assoluti che vogliono imparare Python partendo da zero.',
@@ -11,9 +11,9 @@ const items = [
 </script>
 
 <template>
-  <CommonSection>
+  <Section>
     <div>
-      <CommonSectionTitle title="A chi è rivolto questo corso" />
+      <SectionTitle title="A chi è rivolto questo corso" />
 
       <ul
         class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-700"
@@ -24,5 +24,5 @@ const items = [
         </li>
       </ul>
     </div>
-  </CommonSection>
+  </Section>
 </template>

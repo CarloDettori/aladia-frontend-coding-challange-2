@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import CommonSection from '~/components/common/Section.vue'
-import CommonSectionTitle from '~/components/common/SectionTitle.vue'
+import Section from '~/components/common/Section.vue'
+import SectionTitle from '~/components/common/SectionTitle.vue'
 
 const topics = [
   'Python',
@@ -15,9 +15,9 @@ const topics = [
 </script>
 
 <template>
-  <CommonSection>
+  <Section>
     <div>
-      <CommonSectionTitle title="Argomenti correlati" />
+      <SectionTitle title="Argomenti correlati" />
 
       <ul class="mt-4 flex flex-wrap gap-2" aria-label="Related topics">
         <li v-for="t in topics" :key="t">
@@ -30,5 +30,5 @@ const topics = [
         </li>
       </ul>
     </div>
-  </CommonSection>
+  </Section>
 </template>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import CommonSection from '~/components/common/Section.vue'
-import CommonSectionTitle from '~/components/common/SectionTitle.vue'
-import CommonRatingStars from '~/components/common/RatingStars.vue'
+import Section from '~/components/common/Section.vue'
+import SectionTitle from '~/components/common/SectionTitle.vue'
+import RatingStars from '~/components/common/RatingStars.vue'
 
 type CourseCard = {
   title: string
@@ -39,9 +39,9 @@ const courses: CourseCard[] = [
 </script>
 
 <template>
-  <CommonSection>
+  <Section>
     <div>
-      <CommonSectionTitle title="Altri corsi di questo istruttore" />
+      <SectionTitle title="Altri corsi di questo istruttore" />
 
       <div class="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <article
@@ -50,10 +50,7 @@ const courses: CourseCard[] = [
           class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow transition"
         >
           <!-- thumbnail -->
-          <div
-            class="aspect-[16/9] w-full rounded-lg bg-slate-200"
-            aria-hidden="true"
-          ></div>
+          <img src="https://placehold.co/600x400" class="rounded-xl" alt="">
 
           <h3 class="mt-3 line-clamp-2 text-sm font-extrabold text-slate-900">
             <a href="#" class="hover:underline">{{ c.title }}</a>
@@ -67,7 +64,7 @@ const courses: CourseCard[] = [
             <span class="font-semibold text-slate-900">{{
               c.rating.toFixed(1)
             }}</span>
-            <CommonRatingStars :value="c.rating" size="sm" />
+            <RatingStars :value="c.rating" size="sm" />
             <span class="text-slate-400">•</span>
             <span>({{ c.reviews }})</span>
           </div>
@@ -92,5 +89,5 @@ const courses: CourseCard[] = [
         Mostra altri corsi
       </button>
     </div>
-  </CommonSection>
+  </Section>
 </template>

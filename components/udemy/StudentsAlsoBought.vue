@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import CommonSection from '~/components/common/Section.vue'
-import CommonSectionTitle from '~/components/common/SectionTitle.vue'
-import CommonRatingStars from '~/components/common/RatingStars.vue'
+import Section from '~/components/common/Section.vue'
+import SectionTitle from '~/components/common/SectionTitle.vue'
+import RatingStars from '~/components/common/RatingStars.vue'
 
 type CourseRow = {
   title: string
@@ -52,9 +52,9 @@ const courses: CourseRow[] = [
 </script>
 
 <template>
-  <CommonSection>
+  <Section>
     <div>
-      <CommonSectionTitle title="Gli studenti hanno acquistato anche" />
+      <SectionTitle title="Gli studenti hanno acquistato anche" />
 
       <div
         class="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-white"
@@ -67,10 +67,7 @@ const courses: CourseRow[] = [
           <!-- Left -->
           <div class="flex min-w-0 gap-4">
             <!-- thumbnail placeholder -->
-            <div
-              class="h-16 w-28 shrink-0 rounded bg-slate-200"
-              aria-hidden="true"
-            />
+            <img src="https://placehold.co/600x400" class=" w-28" alt="">
 
             <div class="min-w-0">
               <h3 class="truncate font-bold text-slate-900">
@@ -84,7 +81,7 @@ const courses: CourseRow[] = [
                 <span class="font-semibold text-slate-900">{{
                   c.rating.toFixed(1)
                 }}</span>
-                <CommonRatingStars :value="c.rating" size="sm" />
+                <RatingStars :value="c.rating" size="sm" />
                 <span class="text-slate-400">•</span>
                 <span>({{ c.reviews }})</span>
 
@@ -129,5 +126,5 @@ const courses: CourseRow[] = [
         Mostra altri corsi
       </button>
     </div>
-  </CommonSection>
+  </Section>
 </template>

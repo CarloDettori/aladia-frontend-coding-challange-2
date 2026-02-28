@@ -19,7 +19,7 @@ const courses: MiniCourse[] = [
     instructor: 'Dr. Angela Yu, Developer and Lead Instructor',
     imageAlt: 'Course thumbnail: Succeed in the Age of AI',
     // se vuoi metti path reali in /public/images/...
-    imageSrc: '/images/ai-1.jpg',
+    imageSrc: 'https://placehold.co/600x400',
     isBestSeller: true,
     rating: 4.6,
     ratingCountLabel: '2007 ratings'
@@ -31,7 +31,7 @@ const courses: MiniCourse[] = [
       'Become a Full-Stack Web Developer with just ONE course. HTML, CSS, JavaScript, Node, React, PostgreSQL, Web3 and DApps',
     instructor: 'Dr. Angela Yu, Developer and Lead Instructor',
     imageAlt: 'Course thumbnail: Full-Stack Web Development Bootcamp',
-    imageSrc: '/images/ai-2.jpg',
+    imageSrc: 'https://placehold.co/600x400',
     isBestSeller: true,
     rating: 4.7,
     ratingCountLabel: '465.382 ratings'
@@ -43,7 +43,7 @@ const courses: MiniCourse[] = [
       'Master Python by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!',
     instructor: 'Dr. Angela Yu, Developer and Lead Instructor',
     imageAlt: 'Course thumbnail: 100 Days of Code Python',
-    imageSrc: '/images/ai-3.jpg',
+    imageSrc: 'https://placehold.co/600x400',
     isBestSeller: true,
     rating: 4.7,
     ratingCountLabel: '414.431 ratings'
