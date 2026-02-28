@@ -23,6 +23,7 @@ import AiProgrammer from '~/components/udemy/AiProgrammer.vue'
 <template>
   <PageLayout :hero-bg-enabled="true" hero-bg-height="560px">
     <template #main>
+
       <!-- DESKTOP (>= xl): hero dark -->
       <div class="hidden xl:block">
         <Hero variant="dark" />
@@ -59,5 +60,6 @@ import AiProgrammer from '~/components/udemy/AiProgrammer.vue'
         <CTAAside />
       </div>
     </template>
+    
   </PageLayout>
 </template>

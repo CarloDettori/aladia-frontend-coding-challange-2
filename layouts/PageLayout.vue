@@ -14,11 +14,12 @@ const props = withDefaults(
 </script>
 
 <template>
+  <!-- Barra sopra header -->
   <AnnouncementBar />
 
   <Header />
 
-  <!-- Barra nera sotto header -->
+  <!-- Barra fixed dietro header -->
   <StickyCourseBar />
 
   <div class="w-full relative">
